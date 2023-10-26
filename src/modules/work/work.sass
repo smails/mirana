@@ -1,0 +1,46 @@
+.work
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    gap: 2rem
+    +screen('max', 767)
+      justify-content: center
+  &__box
+    max-width: 450px
+    margin-right: 5rem
+    +screen('max', 1200)
+      max-width: 100%
+  &__txt
+    +fs(18px)
+    padding-left: 8rem
+    +screen('max', 767)
+      padding-left: 0
+    p
+      margin-bottom: 2rem
+  &__group
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 200px
+    +screen('max', 767)
+      margin-top: 6rem
+      width: 100%
+  &__more
+    font-weight: 700
+    +fs(18px)
+    color: var(--secondary-palette)
+    position: relative
+    top: -25px
+    &::after
+      content: ''
+      width: 40px
+      height: 40px
+      display: inline-block
+      background-image: url(../icon/icon-vk.svg)
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: calc(100% + 1.5rem)
+      left: 0
+      right: 0
+      margin: 0 auto

@@ -1,0 +1,30 @@
+.vantage
+  &__row
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 767)
+      grid-template-columns: 1fr
+  &__box
+    border-radius: 20px
+    background-image: var(--primary-gradient)
+    padding: 3.5rem 1.5rem
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    gap: 10px
+    picture
+      width: 73px
+      height: 73px
+      flex-shrink: 0
+      background: var(--secondary-palette)
+      border-radius: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+  &__txt
+    +fs(18px)
+  &__icon
+    vertical-align: middle

@@ -1,0 +1,50 @@
+h1, .display-1
+  +fs(42px)
+  font-weight: 700
+  +screen('max', 767)
+    +fs(30px)
+h2, .display-2
+  font-weight: 700
+  +fs(32px)
+  +screen('max', 767)
+    +fs(24px)
+// h3, .display-3
+// h4, .display-4
+
+.title
+  position: relative
+  padding-left: 80px
+  margin-bottom: 4rem
+  &:before
+    content: ''
+    width: 45px
+    height: 3px
+    background: var(--primary-orange)
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    border-radius: 50px
+    +screen('max', 767)
+      top: 18px
+  &:after
+    content: ''
+    width: 5px
+    height: 4px
+    background: var(--primary-orange)
+    position: absolute
+    left: 50px
+    top: 50%
+    transform: translateY(-50%)
+    border-radius: 75%
+    +screen('max', 767)
+      top: 18px
+
+.text-uppercase
+  text-transform: uppercase
+.text-right
+  text-align: right
+.text-center
+  text-align: center
+.text-underline
+  text-decoration: underline

@@ -1,0 +1,34 @@
+include ../static/pug/head
++head('Адамян Марина Робертовна')
+body
+  +header()
+  +b.heading_doctors
+    +e.inner.inner
+      +e.row
+        +e.content
+          +b.breadcrumb
+            +e.home
+            +e.list
+              +e.A.link(href="/") Главная 
+              +e.A.link(href="/") Врачи
+              +e.P.link Адамян Марина Робертовна
+          +e.P.title.display-1 Адамян Марина Робертовна
+          +e.P.sign_doctors Главный врач. Врач-стоматолог высшей
+            br
+            | категории. Хирург-имплантолог. Ортопед
+          +e.work
+            b Стаж работы: 
+            | 5 лет
+          +e.price
+            b Прием: 
+            span от 3 000 руб.
+          +e.control
+            +e.A.btn.btn_size-22.js-open-modal(href='#call') ЗАПИСАТЬСЯ
+            +e.A.whts(href="") Получить консультацию
+        +e.picture_blue
+          +e.IMG.pic(src='/img/pers-page.png' alt='')
+  include ../modules/doctors/single
+  include ../modules/doctors/doctors
+  include ../modules/footer/footer
+
+  script(src="/js/common.js")  

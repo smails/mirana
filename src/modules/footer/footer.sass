@@ -1,0 +1,71 @@
+.footer
+  margin-top: 9rem
+  padding-bottom: 1.5rem
+  position: relative
+  +screen('max', 767)
+    padding-bottom: 120px
+  &__inner
+    +screen('max', 767)
+      display: flex
+      gap: 30px
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +screen('max', 767)
+      flex-shrink: 0
+      display: block
+  &__list
+    display: flex
+    gap: 5rem
+    +screen('max', 1400)
+      gap: 3rem
+    +screen('max', 767)
+      flex-flow: column
+  &__item
+    margin-bottom: 0
+  &__link
+    text-transform: uppercase
+    letter-spacing: 0.72px
+    +screen('max', 1023)
+      +fs(14px)
+    &.active
+      color: var(--secondary-palette)
+  &__bottom
+    margin-top: 1rem
+    +screen('max', 767)
+      margin-top: 0
+  &__line
+    display: flex
+    gap: 7.5rem
+    margin-bottom: 1.5rem
+    +screen('max', 1200)
+      gap: 10rem
+    +screen('max', 767)
+      display: block
+    &_between
+      justify-content: space-between
+  &__sign
+    +fs(14px)
+    color: var(--primary-grey)
+    +screen('max', 767)
+      margin-bottom: 2rem
+    &[href]
+      &:hover
+        color: var(--primary-orange)
+    &_req
+      +screen('max', 767)
+        position: absolute
+        bottom: 10px
+        left: 0
+        right: 0
+        text-align: center
+  &__btn
+    +screen('max', 1200)
+      display: none
+    +screen('max', 767)
+      display: block
+      position: absolute
+      bottom: 50px
+      width: calc(100% - 40px)
+      left: 20px

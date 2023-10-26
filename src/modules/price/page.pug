@@ -1,0 +1,38 @@
++b.price-list
+  +e.inner.inner
+    +e.row
+      each item, index in [ "Терапия", "Гигиена", "Ортопедия", "Ортодонтия", "Хирургия", "Имплантация", "Стоматология под наркозом", "Стоматология под седацией",]
+        +e.box
+          +e.head
+            +e.IMG.icon(src='/icon/icon-service-'+ (index+1) +'.svg' alt='')
+            +e.H2.caption=item
+          +e.middle
+            +e.price
+              +e.name
+                span Наложение временной пломбы
+              +e.val 1 600 руб.
+            +e.price
+              +e.name
+                span Наложение изолирующей прокладки в полость зуба
+              +e.val 3 200 руб.
+            +e.price
+              +e.name
+                span Наложение девитализирующей пасты
+              +e.val 3 200 руб.
+            +e.price
+              +e.name
+                span Снятие временной пломбы
+              +e.val 500 руб.
+            +e.price
+              +e.name
+                span Снятие постоянной пломбы.
+              +e.val 1 600 руб.
+            +e.price
+              +e.name
+                span Наложение коффердама.
+              +e.val 1 600 руб.
+          +e.control
+            +e.A.btn.btn.js-open-modal(href="#call") ЗАПИСАТЬСЯ
+            +e.A.more(href="#") ПОДРОБНЕЕ
+              svg(width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M5 12h14M12 5l7 7-7 7' stroke='#FF9C81' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')

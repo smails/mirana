@@ -1,0 +1,17 @@
+include ../static/pug/head
++head('Наши специалисты ')
+body
+  +header()
+  +b.heading
+    +e.inner.inner
+      +b.breadcrumb
+        +e.home
+        +e.list
+          +e.A.link(href="/") Главная 
+          +e.P.link Врачи
+      +e.H1.title Наши специалисты
+  include ../modules/doctors/page
+  include ../modules/review/review
+  include ../modules/footer/footer
+
+  script(src="/js/common.js") 

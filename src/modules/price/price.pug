@@ -1,0 +1,52 @@
++b.price.section
+  +e.inner.inner
+    +e.H2.title.title Стоимость услуг стоматологии 
+      span Мирана Дент
+    +e.top
+      +e.P.sign Представляем цены на стоматологические услуги в нашей клинике. Всегда идем навстречу постоянным клиентам и делаем 
+        b скидки до 50%!
+      +e.A.btn.btn_orange._mini.js-open-modal(href='#') А так же до 25% первичным посетителям
+    +e.list
+      each item in ["Терапия","Имплантация","Ортодонтия","Эстетическая стоматология",]
+        +e.item
+          +e.head
+            +e.P.caption=item
+            +e.arrow
+              svg(width='56' height='56' fill='none' xmlns='http://www.w3.org/2000/svg')
+                circle(cx='28' cy='28' r='28' fill='#C9EAFF')
+                path(d='m22 26 6 6 6-6' stroke='#22A5E6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          +e.body_padding
+            each el in ["Терапия, эндодонтия","Профилактика и гигиена","Консультация и диагностика","Инъекции и анестезия","Лазерное лечение",]
+              +e.item
+                +e.head
+                  +e.P.caption=el
+                  +e.arrow
+                    svg(width='56' height='56' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      circle(cx='28' cy='28' r='28' fill='#C9EAFF')
+                      path(d='m22 26 6 6 6-6' stroke='#22A5E6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                +e.body
+                  +e.price
+                    +e.name
+                      span Наложение временной пломбы
+                    +e.val 1 600 руб.
+                  +e.price
+                    +e.name
+                      span Наложение изолирующей прокладки в полость зуба
+                    +e.val 3 200 руб.
+                  +e.price
+                    +e.name
+                      span Наложение девитализирующей пасты
+                    +e.val 3 200 руб.
+                  +e.price
+                    +e.name
+                      span Снятие временной пломбы
+                    +e.val 500 руб.
+                  +e.price
+                    +e.name
+                      span Снятие постоянной пломбы.
+                    +e.val 1 600 руб.
+                  +e.price
+                    +e.name
+                      span Наложение коффердама.
+                    +e.val 1 600 руб.
+

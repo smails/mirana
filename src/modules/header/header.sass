@@ -1,0 +1,299 @@
+.header
+  padding: 1.5rem 0 .5rem
+  box-sizing: border-box
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 2rem
+  &__left
+    display: flex
+    align-items: center
+    gap: 30px
+  &__pic
+    +screen('max', 767)
+      width: 80px
+  &__sign
+    +fs(14px)
+    font-weight: 700
+    max-width: 110px
+    color: var(--primary-grey)
+    +screen('max', 767)
+      display: none
+  &__middle
+    display: flex
+    align-items: center
+    gap: clamp(30px, 7vw, 130px)
+  &__metro
+    +fs(14px)
+    padding-left: 30px
+    position: relative
+    margin-bottom: 1rem
+    display: block
+    &:before
+      content: ''
+      width: 24px
+      height: 28px
+      background-image: url(../icon/icon-metro.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+  &__time
+    +fs(14px)
+    padding-left: 30px
+    position: relative
+    &:before
+      content: ''
+      width: 24px
+      height: 24px
+      background-image: url(../icon/icon-clock.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+  &__phone
+    +fs(20px)
+    padding-left: 30px
+    position: relative
+    font-weight: 700
+    display: block
+    margin-bottom: 5px
+    transition: .3s ease
+    +screen('max', 767)
+      +fs(14px)
+      padding-left: 25px
+    &:before
+      content: ''
+      width: 24px
+      height: 24px
+      background-image: url(../icon/icon-phone.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      +screen('max', 767)
+        width: 18px
+        height: 18px
+    &:hover
+      color: var(--secondary-palette)
+  &__whts
+    +fs(18px)
+    padding-left: 30px
+    position: relative
+    font-weight: 700
+    display: block
+    transition: .3s ease
+    +screen('max', 767)
+      +fs(14px)
+      padding-left: 25px
+    &:before
+      content: ''
+      width: 28px
+      height: 28px
+      background-image: url(../icon/icon-whatsapp.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      +screen('max', 767)
+        width: 18px
+        height: 18px
+    &:hover
+      color: var(--secondary-palette)
+  &__col
+    &:first-of-type
+      +screen('max', 1400)
+        display: none
+  &__burger
+    display: none
+    padding: 5px
+    box-sizing: border-box
+    border-radius: 5px
+    background: var(--secondary-palette)
+    +screen('max', 1023)
+      display: block
+    &.open
+      .burger
+        &::before,
+        &::after
+          transition: top .2s,transform .2s .2sx
+        &::after
+          transform: rotate(-45deg) translate(3px, -3px)
+        &::before
+          transform: rotate(45deg) translate(2px, 3px)
+        span
+          display: none
+  &__btn
+    +screen('max', 1023)
+      display: none
+
+.burger
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column
+  gap: 5px
+  position: relative
+  width: 35px
+  height: 35px
+  flex-shrink: 0
+  z-index: 9991
+  &::after,
+  &::before
+    content: ""
+    display: block
+    background: #fff
+    width: 80%
+    height: 3px
+    transition: top .2s .2s,transform .2s
+    transform-origin: center
+  span
+    display: block
+    width: 80%
+    height: 3px
+    transition: opacity .25s,background .2s .5s
+    background: #fff
+
+.nav
+  display: flex
+  justify-content: center
+  +screen('max', 1023)
+    display: none
+    position: fixed
+    height: calc(100dvh - 80px)
+    background: var(--primary-white)
+    z-index: 99
+    overflow: auto
+    width: 100%
+  &__list
+    display: flex
+    justify-content: center
+    gap: 50px
+    +screen('max', 1023)
+      display: block
+      width: 100%
+  &__item
+    margin-bottom: 0
+    padding: 2rem 0
+    position: relative
+    +screen('max', 1023)
+      border-bottom: 1px solid var(--primary-border-color)
+    &:hover
+      .nav__dropdown
+        opacity: 1
+        visibility: visible
+        z-index: 2
+  &__link
+    text-transform: uppercase
+    letter-spacing: 0.72px
+    display: flex
+    align-items: center
+    gap: 1rem
+    transition: .5s ease
+    +screen('max', 1023)
+      padding: 0 3rem
+    &:hover
+      color: var(--secondary-palette)
+  &__dropdown
+    position: absolute
+    top: 100%
+    left: 0
+    width: 302px
+    box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+    background: var(--primary-white)
+    transition: .5s ease
+    opacity: 0
+    visibility: hidden
+    z-index: -2
+    +screen('max', 1023)
+      position: relative
+      opacity: 1
+      visibility: visible
+      width: 100%
+      box-shadow: none
+  &__dropdown-item
+    padding: 1rem
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    gap: .5rem
+    margin-bottom: 0
+    border-bottom: 1px solid var(--primary-border-color)
+    position: relative
+    +screen('max', 1023)
+      flex-wrap: wrap
+      padding: 0
+    &:last-of-type
+      +screen('max', 1023)
+        border-bottom: 0
+    &:hover
+      .nav__level
+        opacity: 1
+        visibility: visible
+      .nav__dropdown-link
+        color: var(--secondary-palette)
+      path
+        fill: var(--secondary-palette)
+    img
+      width: 22px
+      height: 22px
+      object-fit: contain
+      vertical-align: middle
+      +screen('max', 1023)
+        margin: 2rem 0 2rem 3rem
+  &__level
+    position: absolute
+    background: var(--primary-white)
+    left: 100%
+    top: 0
+    border-radius: 0 10px 10px 0
+    box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+    z-index: -1
+    width: 280px
+    opacity: 0
+    visibility: hidden
+    transition: .3s ease
+    +screen('max', 1023)
+      position: relative
+      opacity: 1
+      visibility: visible
+      left: 0
+      box-shadow: none
+      width: 100%
+  &__level-item
+    margin-bottom: 0
+    +screen('max', 1023)
+      padding: 0 3rem
+      border-bottom: 1px solid var(--primary-border-color)
+    &:first-of-type
+      .nav__level-link
+        border-top-right-radius: 10px
+    &:last-of-type
+      +screen('max', 1023)
+        border-bottom: 0
+      .nav__level-link
+        border-bottom-right-radius: 10px
+  &__level-link
+    padding: 1.25rem 1rem
+    border-bottom: 1px solid var(--primary-border-color)
+    transition: .5s ease
+    display: block
+    +screen('max', 1023)
+      border-bottom: 0
+    &:hover
+      color: var(--primary-white)
+      background: var(--secondary-palette)
+      border-color: var(--secondary-palette)

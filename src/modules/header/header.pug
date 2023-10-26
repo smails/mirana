@@ -1,0 +1,48 @@
+mixin header()
+  +b.header
+    +e.inner.inner
+      +e.left
+        +e.A.logo(href="/")
+          +e.IMG.pic(src='/icon/icon-logo.svg' alt='')
+        +e.P.sign Стоматология с заботой о Вас
+      +e.middle
+        +e.col
+          +e.A.metro(href="#") м. Щукинская, Волоколамске шоссе, 45
+          +e.P.time Работаем ежедневно с 9 до 21.00
+        +e.col
+          +e.A.phone(href="tel:+7 (926) 190-99-11") +7 (926) 190-99-11
+          +e.A.whts(href="") Запись в Whatsapp
+      +e.right
+        +e.A.btn.btn_orange.js-open-modal(href='#call') ЗАПИСАТЬСЯ ОНЛАЙН
+        +e.burger
+          .burger
+            span
+  +b.NAV.nav
+    +e.UL.list
+      +e.LI.item
+        +e.A.link(href="#") Услуги
+          svg(width='10' height='5' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='m0 0 5 5 5-5H0Z' fill='#171724')
+        +e.UL.dropdown
+          each val,index in [ 'Терапия', 'Гигиена', 'Ортопедия', 'Ортодонтия', 'Хирургия', 'Имплантация', 'Стоматология под наркозом', 'Стоматология под седацией']
+            +e.LI.dropdown-item
+              img(src="/icon/icon-service-"+ (index+1) +".svg" alt="")
+              +e.A.dropdown-link(href="#")=val
+              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none')
+                path(d='m10 17 5-5-5-5v10Z' fill='#171724')
+              +e.UL.level
+                each el in ["Лечение кариеса", "Светоотверждаемые пломба", "Эстетическая реставрация", "Лечение пульпита, периодонтита", "Снятие амальгамной пломбы",]
+                  +e.LI.level-item
+                    +e.A.level-link(href="#")=el
+      +e.LI.item
+        +e.A.link.active(href="#") Врачи
+      +e.LI.item
+        +e.A.link(href="#") Акции
+      +e.LI.item
+        +e.A.link(href="#") Отзывы
+      +e.LI.item
+        +e.A.link(href="#") О стоматологии
+      +e.LI.item
+        +e.A.link(href="#") Наши работы
+      +e.LI.item
+        +e.A.link(href="#") Контакты

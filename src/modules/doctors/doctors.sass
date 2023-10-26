@@ -1,0 +1,332 @@
+.doctors
+  overflow: hidden
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__more
+    margin-top: 2rem
+    font-weight: 700
+    text-transform: uppercase
+    color: var(--primary-orange)
+    display: block
+    transition: .5s ease
+    +screen('max', 767)
+      display: none
+    svg
+      vertical-align: sub
+      margin-left: .5rem
+    path
+      transition: .5s ease
+    &:hover
+      color: var(--secondary-palette)
+      path
+        stroke: var(--secondary-palette)
+  &__pic
+    width: 100%
+    border-radius: 20px
+    vertical-align: middle
+    margin-bottom: 1.5rem
+  &__name
+    font-weight: 700
+    color: var(--secondary-palette)
+    +fs(20px)
+    margin-bottom: 1rem
+    height: 54px
+  &__pos
+    line-height: 1.44
+    margin-bottom: 1.2rem
+    height: 70px
+  &__work
+    margin-bottom: 1.2rem
+  &__price
+    span
+      font-weight: 700
+      padding-left: 40px
+      position: relative
+      box-sizing: border-box
+      color: var(--primary-orange)
+      margin-left: 1rem
+      display: inline-block
+      &:before
+        content: ''
+        width: 32px
+        height: 32px
+        background-image: url(../icon/icon-price.svg)
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(-15%)
+  &__btn
+    width: 100%
+    margin-top: 4rem
+  &__slider
+    padding: 0 7.5rem 6rem
+    box-sizing: border-box
+    +screen('max', 1200)
+      padding: 0 0 6rem
+    .owl-nav
+      max-width: 1500px
+      top: 25%
+    .owl-dots
+      bottom: 0
+
+.doctors-list
+  padding: 6rem 0 4rem
+  &__nav
+    display: flex
+    gap: 1rem
+    margin-bottom: 3.2rem
+    overflow: auto
+  &__tab
+    padding: 2rem 3rem
+    +fs(18px)
+    border-radius: 20px
+    flex-grow: 1
+    border: 1px solid #C8C8C8
+    transition: .5s ease
+    text-align: center
+    box-sizing: border-box
+    cursor: pointer
+    flex-shrink: 0
+    +screen('max', 767)
+      width: 70vw
+    &.active
+      border-color: var(--secondary-palette)
+      font-weight: 700
+    &:hover
+      border-color: var(--secondary-palette)
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 5rem 2rem
+    +screen('max', 1300)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 767)
+      grid-template-columns: 1fr
+  &__item
+    padding: 2rem
+    box-sizing: border-box
+    border-radius: 20px
+    background: var(--primary-white)
+    transition: .5s ease
+    &:hover
+      box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+  &__pic
+    width: 100%
+    border-radius: 20px
+    vertical-align: middle
+    margin-bottom: 1.5rem
+  &__name
+    font-weight: 700
+    color: var(--secondary-palette)
+    +fs(20px)
+    margin-bottom: 1rem
+    height: 54px
+  &__pos
+    line-height: 1.44
+    margin-bottom: 1.2rem
+    height: 46px
+  &__work
+    margin-bottom: 1.2rem
+  &__price
+    span
+      font-weight: 700
+      padding-left: 40px
+      position: relative
+      box-sizing: border-box
+      color: var(--primary-orange)
+      margin-left: 1rem
+      display: inline-block
+      &:before
+        content: ''
+        width: 32px
+        height: 32px
+        background-image: url(../icon/icon-price.svg)
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(-15%)
+  &__btn
+    width: 100%
+    margin-top: 4rem
+
+.doctors-single
+  overflow: hidden
+  margin-top: 8rem
+  &__line
+    margin-bottom: 8rem
+  &__info
+    padding-left: 8rem
+    display: flex
+    align-items: flex-start
+    gap: 4rem
+    +screen('max', 767)
+      flex-flow: column
+      justify-content: center
+      align-items: center
+      padding-left: 0
+  &__pic
+    margin-top: 3rem
+    vertical-align: middle
+    flex-shrink: 0
+  &__text
+    flex-grow: 1
+    border-radius: 20px
+    background: var(--primary-white)
+    box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+    padding: 3.5rem 4.5rem
+    box-sizing: border-box
+    +fs(18px)
+    ul
+      list-style: disc
+      padding-left: 2rem
+      line-height: 1.7
+      li
+        &:last-of-type
+          margin-bottom: 0
+  &__list
+    padding-left: 8rem
+    +screen('max', 767)
+      padding-left: 0
+  &__item
+    display: flex
+    align-items: flex-start
+    gap: 4rem
+    position: relative
+    padding-bottom: 4rem
+    margin-bottom: 4rem
+    +screen('max', 767)
+      display: block
+    &.hidden
+      display: none
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100vw
+      height: 2px
+      border-bottom: 2px dashed #D9D9D9
+      +screen('max', 767)
+        left: -20px
+  &__yaer
+    padding: 2rem 3rem
+    box-sizing: border-box
+    flex-shrink: 0
+    border-radius: 10px
+    background: var(--tertiary-gradient)
+    +fs(32px)
+    font-weight: 700
+    color: var(--secondary-palette)
+    +screen('max', 767)
+      width: 100%
+      text-align: center
+  &__txt
+    flex-grow: 1
+    margin-top: 2rem
+    ul
+      list-style: disc
+      padding-left: 2rem
+      line-height: 1.7
+      li
+        &:last-of-type
+          margin-bottom: 0
+  &__btn
+    display: block
+    font-weight: 700
+    color: var(--primary-orange)
+    text-transform: uppercase
+    +fs(18px)
+    padding: 1.7rem 6rem
+    transition: .5s ease-in
+    border: 1px solid var(--primary-orange)
+    border-radius: 50px
+    box-sizing: border-box
+    text-align: center
+    max-width: 328px
+    margin: 0 auto
+    width: 100%
+    +screen('max', 767)
+      padding: 15px
+    &:hover
+      color: var(--primary-white)
+      background: var(--primary-orange)
+
+.sertif
+  overflow: hidden
+  &__slider
+    padding: 0 8rem
+    box-sizing: border-box
+    padding-bottom: 8rem
+    .owl-stage-outer
+      height: 420px
+      .owl-item
+        height: 100%
+    .owl-stage
+      height: 100%
+  &__slide
+    display: flex
+    align-items: center
+    height: 100%
+  &__pic
+    border-radius: 20px
+    width: 100%
+    vertical-align: middle
+  .owl-nav
+    max-width: 1500px
+    top: 38%
+
+.review-single
+  &__inner
+    +screen('max', 767)
+      padding: 0
+  &__title
+    margin-bottom: 2rem
+    +screen('max', 767)
+      margin-left: 2rem
+  &__slider
+    padding: 0 4rem
+    box-sizing: border-box
+    +screen('max', 1200)
+      padding: 0
+  &__slide
+    display: flex
+    align-items: flex-start
+    gap: 3.2rem
+    padding: 3rem 8rem 5rem
+    box-sizing: border-box
+    border-radius: 20px
+    background: var(--primary-white)
+    box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+    margin: 3rem 3rem 4rem
+    +fs(18px)
+    +screen('max', 767)
+      flex-flow: column
+      justify-content: center
+      align-items: center
+      padding: 5rem
+  &__pic
+    width: 90px
+    height: 90px
+    object-fit: cover
+    border-radius: 100%
+    vertical-align: middle
+  &__text
+    margin-bottom: 2rem
+    line-height: 1.7
+  &__info
+    line-height: 1.7
+    b
+      color: var(--secondary-palette)
+    a
+      color: var(--secondary-palette)
+      border-bottom: 1px solid var(--secondary-palette)
+      display: inline-block
+      line-height: 1

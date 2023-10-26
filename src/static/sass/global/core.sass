@@ -1,0 +1,163 @@
+html
+  font-size: 10px
+  +screen('max', 1200)
+    font-size: 7.5px
+  +screen('max', 767)
+    font-size: 5px
+body
+  font-size: 16px
+  font-weight: 400
+  font-family: $font-family
+  color: var(--primary-palette)
+  line-height: normal
+  &.hidden
+    overflow: hidden
+
+.inner
+  max-width: 1480px
+  width: в 100%
+  padding: 0 4rem
+  margin: 0 auto
+  box-sizing: border-box
+
+.section
+  margin: 8rem 0
+
+.owl-carousel
+  display: none
+  width: 100%
+  -webkit-tap-highlight-color: transparent
+  position: relative
+  z-index: 1
+
+  .owl-stage
+    position: relative
+    -ms-touch-action: pan-Y
+    touch-action: manipulation
+    -moz-backface-visibility: hidden
+    &:after
+      content: "."
+      display: block
+      clear: both
+      visibility: hidden
+      line-height: 0
+      height: 0
+    &-outer
+      position: relative
+      overflow: hidden
+      -webkit-transform: translate3d(0px, 0px, 0px)
+
+  .owl-wrapper,
+  .owl-item
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    -ms-backface-visibility: hidden
+    -webkit-transform: translate3d(0,0,0)
+    -moz-transform: translate3d(0,0,0)
+    -ms-transform: translate3d(0,0,0)
+    position: relative
+    min-height: 1px
+    float: left
+    -webkit-backface-visibility: hidden
+    -webkit-tap-highlight-color: transparent
+    -webkit-touch-callout: none
+
+  .owl-nav.disabled,
+  .owl-dots.disabled
+    display: none
+
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next,
+  .owl-dot
+    cursor: pointer
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+  .owl-nav
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 1440px
+    width: 100%
+    .owl-prev, .owl-next
+      width: 50px
+      height: 50px
+      background: var(--primary-white)
+      display: flex
+      justify-content: center
+      align-items: center
+      filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.15))
+      border-radius: 100%
+      transition: .5s ease
+      border: 1px solid transparent
+      svg
+        vertical-align: middle
+      &:hover
+        background: none
+        border-color: var(--primary-orange)
+
+  .owl-dots
+    position: absolute
+    bottom: 3rem
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 7px
+    .owl-dot
+      background: var(--primary-grey)
+      width: 15px
+      height: 15px
+      border-radius: 100%
+      transition: .3s ease
+      &.active
+        background: var(--primary-orange)
+
+  .owl-nav button.owl-prev,
+  .owl-nav button.owl-next,
+  button.owl-dot
+    color: inherit
+    padding: 0!important
+    font: inherit
+
+  &.owl-loaded
+    display: block
+
+  &.owl-loading
+    opacity: 0
+    display: block
+
+  &.owl-hidden
+    opacity: 0
+
+  &.owl-refresh .owl-item
+    visibility: hidden
+
+  &.owl-drag .owl-item
+    touch-action: pan-y
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+  &.owl-grab
+    cursor: move
+    cursor: grab
+
+  &.owl-rtl
+    direction: rtl
+
+  &.owl-rtl .owl-item
+    float: right
+
+@keyframes open
+  0%
+    transform: scale(1)
+    opacity: 1

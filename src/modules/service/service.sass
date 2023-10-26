@@ -1,0 +1,147 @@
+.service
+  &__row
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 20px
+    +screen('max', 1200)
+      grid-template-columns: repeat(3, 1fr)
+    +screen('max', 1023)
+      grid-template-columns: repeat(2, 1fr)
+    +screen('max', 767)
+      grid-template-columns: 1fr
+  &__box
+    border-radius: 20px
+    background-image: var(--primary-gradient)
+    padding: 3.5rem 2.5rem
+    box-sizing: border-box
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    gap: 2rem
+    position: relative
+    z-index: 1
+    overflow: hidden
+    +screen('max', 767)
+      padding: 20px
+    &:hover
+      .service__icon
+        transform: translate(-20%, -15%)
+  &__icon
+    width: 212px
+    height: 212px
+    position: absolute
+    right: -60px
+    bottom: -60px
+    z-index: -1
+    opacity: 0.3
+    transition: 1s ease
+    object-fit: cover
+  &__caption
+    font-weight: 700
+    +fs(22px)
+    transition: .3s ease
+    +screen('max', 767)
+      +fs(20px)
+    &:hover
+      color: var(--secondary-palette)
+  &__list
+    ul
+      list-style: disc inside
+  &__info
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__price
+    color: var(--primary-orange)
+    font-weight: 700
+    +fs(18px)
+  &__more
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    background: var(--secondary-palette)
+    border-radius: 500px
+    padding: 10px
+    font-weight: 800
+    color: var(--primary-white)
+    +fs(14px)
+    text-transform: uppercase
+    width: 44px
+    box-sizing: border-box
+    transition: .5s ease
+    svg
+      vertical-align: middle
+    span
+      line-height: 1
+      display: inline-block
+      width: 0
+      overflow: hidden
+      transition: .5s ease
+      white-space: nowrap
+    &:hover
+      width: 158px
+      span
+        width: 90px
+        margin-right: 1rem
+
+.service-info
+  &__line
+    display: flex
+    gap: 5rem
+    margin-bottom: 8rem
+    +screen('max', 1023)
+      display: block
+      margin-bottom: 5rem
+    &:nth-of-type(2n)
+      flex-flow: row-reverse
+    picture
+      width: min(50%, 600px)
+  &__content
+    max-width: 50%
+    line-height: 1.5
+    +screen('max', 1023)
+      max-width: 100%
+      margin-bottom: 5rem
+    ul
+      list-style: desc inside
+      margin: 2rem 0
+    ol
+      list-style: decimal inside
+      margin: 2rem 0
+    p
+      margin-bottom: 2rem
+    h2,h3,h4
+      position: relative
+      padding-left: 80px
+      margin-bottom: 4rem
+      &:before
+        content: ''
+        width: 45px
+        height: 3px
+        background: var(--primary-orange)
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 50px
+      &:after
+        content: ''
+        width: 5px
+        height: 4px
+        background: var(--primary-orange)
+        position: absolute
+        left: 50px
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 75%
+  &__pic
+    width: 100%
+    border-radius: 20px
+    object-fit: cover
+  &__btn
+    width: min(50%, 396px)
+    +screen('max', 1023)
+      margin: 0 auto
+      display: block
+    +screen('max', 1023)
+      width: 100%

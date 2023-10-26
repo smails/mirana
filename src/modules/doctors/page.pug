@@ -1,0 +1,63 @@
++b.doctors-list
+  +e.inner.inner
+    +e.nav
+      +e.tab.active Все врачи
+      +e.tab Терапевты
+      +e.tab Детские
+      +e.tab Хирурги
+      +e.tab Ортодонты
+      +e.tab Ортопеды
+      +e.tab Пародантологи
+    +e.list
+      - for(var i = 0; i < 5; i++){
+        +e.item
+          a(href="#")
+            +e.IMG.pic(src='/img/pers-1.png' alt='')
+          +e.P.name Авдалян Зара Самвеловна
+          +e.pos Врач-стоматолог терапевт, 
+            br
+            | эндодонтист, ортопед, хирург
+          +e.work
+            b Стаж работы: 
+            | 5 лет
+          +e.price
+            b Прием:
+            span от 3 000 руб.
+          +e.A.btn.btn.js-open-modal(href="#call") ЗАПИСАТЬСЯ
+        +e.item
+          a(href="#")
+            +e.IMG.pic(src='/img/pers-2.png' alt='')
+          +e.P.name Адамян Марина Робертовна
+          +e.pos Здесь может быть специализация
+          +e.work
+            b Стаж работы: 
+            | 5 лет
+          +e.price
+            b Прием:
+            span от 3 000 руб.
+          +e.A.btn.btn.js-open-modal(href="#call") ЗАПИСАТЬСЯ
+        +e.item
+          a(href="#")
+            +e.IMG.pic(src='/img/pers-3.png' alt='')
+          +e.P.name Албакова Лейла Ахметовна
+          +e.pos Здесь может быть специализация
+          +e.work
+            b Стаж работы: 
+            | 5 лет
+          +e.price
+            b Прием:
+            span от 3 000 руб.
+          +e.A.btn.btn.js-open-modal(href="#call") ЗАПИСАТЬСЯ
+        +e.item
+          a(href="#")
+            +e.IMG.pic(src='/img/pers-4.png' alt='')
+          +e.P.name Бойко Алина Сергеевна
+          +e.pos Здесь может быть специализация
+          +e.work
+            b Стаж работы: 
+            | 5 лет
+          +e.price
+            b Прием:
+            span от 3 000 руб.
+          +e.A.btn.btn.js-open-modal(href="#call") ЗАПИСАТЬСЯ
+      - }

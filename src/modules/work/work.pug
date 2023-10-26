@@ -1,0 +1,12 @@
++b.work.section
+  +e.inner.inner
+    +e.box
+      +e.H2.title.title Наши работы
+      +e.txt
+        p Мы делаем наши клиентов красивыми.
+        p Ознакомьтесь с результатами, а если хотите так же, то приходите к нам!
+    - for(var i = 1; i < 8; i++){
+      +e.IMG.pic(src='/img/work-'+ i +'.png' alt='')
+    -}
+    +e.group
+      +e.A.more(href='#') БОЛЬШЕ РАБОТ В ВК

@@ -1,0 +1,30 @@
+.btn
+  display: inline-block
+  font-weight: 700
+  color: var(--primary-white)
+  text-transform: uppercase
+  +fs(18px)
+  padding: 1.7rem 6rem
+  transition: .5s ease-in
+  border: 1px solid transparent
+  background: var(--secondary-palette)
+  border-radius: 50px
+  box-sizing: border-box
+  text-align: center
+  +screen('max', 767)
+    padding: 15px
+  &:hover
+    background: var(--primary-white)
+    color: var(--secondary-palette)
+    border-color: var(--secondary-palette)
+  &_size-22
+    +fs(22px)
+  &_orange
+    background: var(--primary-orange)
+    &:hover
+      background: var(--primary-white)
+      color: var(--primary-orange)
+      border-color: var(--primary-orange)
+  &_mini
+    padding: 1.3rem 5rem
+    border-radius: 5px

@@ -1,0 +1,267 @@
+.price
+  position: relative
+  overflow: hidden
+  padding-bottom: 3rem
+  // &:before
+  //   content: ''
+  //   width: 420px
+  //   height: 720px
+  //   position: absolute
+  //   left: 0
+  //   top: 650px
+  //   background-image: url(../img/price-bg-1.png)
+  //   background-repeat: no-repeat
+  //   background-position: center
+  //   z-index: -1
+  // &:after
+  //   content: ''
+  //   width: 145px
+  //   height: 280px
+  //   position: absolute
+  //   right: 0
+  //   top: 250px
+  //   background-image: url(../img/price-bg-2.png)
+  //   background-repeat: no-repeat
+  //   background-position: center
+  //   z-index: -1
+  &__title
+    span
+      color: var(--secondary-palette)
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 2rem
+    margin-bottom: 7rem
+    +screen('max', 1023)
+      display: block
+  &__sign
+    max-width: 720px
+    +fs(18px)
+    margin-left: 8rem
+    +screen('max', 1200)
+      margin-left: 0
+      max-width: 60%
+    +screen('max', 1023)
+      max-width: 100%
+      margin-bottom: 3rem
+    +screen('max', 767)
+      +fs(16px)
+  &__item
+    margin-bottom: 2rem
+  &__body
+    margin-bottom: 4rem
+    display: none
+    &_padding
+      padding: 0 5.5rem
+      box-sizing: border-box
+      +screen('max', 1023)
+        padding: 0 4rem
+  &__head
+    border-radius: 20px
+    border: 1px solid transparent
+    background: var(--primary-white)
+    box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+    padding: 1.5rem 1.5rem 1.5rem 3rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 2rem
+    transition: .5s ease
+    cursor: pointer
+    +screen('max', 767)
+      padding: 20px
+    &.active
+      border-color: var(--secondary-palette)
+      svg
+        transform: rotate(180deg)
+      circle
+        fill: var(--secondary-palette)
+      path
+        stroke: var(--primary-white)
+    svg, path, circle
+      transition: .5s ease
+  &__arrow
+    +screen('max', 767)
+      height: 56px
+  &__caption
+    font-weight: 600
+    +fs(22px)
+    +screen('max', 767)
+      +fs(20px)
+  &__price
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 4rem
+    margin-bottom: 2rem
+    +screen('max', 767)
+      display: block
+      margin-bottom: 3rem
+  &__name
+    position: relative
+    display: flex
+    +fs(18px)
+    align-items: flex-end
+    width: 100%
+    line-height: 1
+    +screen('max', 767)
+      margin-bottom: 3rem
+      line-height: 1.5
+    span
+      flex-shrink: 0
+      +screen('max', 767)
+        width: 100%
+    &:after
+      content: ''
+      flex-grow: 1
+      height: 2px
+      width: 100%
+      border-bottom: 1px dotted var(--primary-palette)
+      display: block
+      bottom: 1px
+      position: relative
+      +screen('max', 767)
+        content: none
+  &__val
+    flex-shrink: 0
+    font-weight: 700
+    padding-left: 40px
+    position: relative
+    width: 130px
+    box-sizing: border-box
+    +screen('max', 767)
+      +fs(18px)
+      width: 180px
+    &:before
+      content: ''
+      width: 32px
+      height: 32px
+      background-image: url(../icon/icon-price.svg)
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 0
+      left: 0
+      transform: translateY(-15%)
+  &__btn
+    +screen('max', 767)
+      padding: 15px 20px
+      text-align: left
+      text-wrap: balance
+
+.price-list
+  padding: 5rem 0
+  &__row
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 4rem
+  &__box
+    border-radius: 20px
+    padding: 3rem 4.5rem 5rem
+    display: flex
+    justify-content: space-between
+    flex-flow: column
+    gap: 1.5rem
+  &__caption
+    a
+      transition: .5s ease
+      &:hover
+        color: var(--secondary-palette)
+  &__head
+    display: flex
+    align-items: center
+    position: relative
+    padding-left: 80px
+    gap: 2rem
+    &:before
+      content: ''
+      width: 45px
+      height: 3px
+      background: var(--primary-orange)
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      border-radius: 50px
+    &:after
+      content: ''
+      width: 5px
+      height: 4px
+      background: var(--primary-orange)
+      position: absolute
+      left: 50px
+      top: 50%
+      transform: translateY(-50%)
+      border-radius: 75%
+  &__icon
+    width: 65px
+    height: 65px
+    object-fit: contain
+  &__price
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 3rem
+    margin-bottom: 1.5rem
+    &[href]
+      &:hover
+        .price-list__name
+          color: var(--secondary-palette)
+  &__name
+    position: relative
+    display: flex
+    +fs(18px)
+    align-items: flex-end
+    width: 100%
+    line-height: 1
+    transition: .5s ease
+    span
+      flex-shrink: 0
+    &:after
+      content: ''
+      flex-grow: 1
+      height: 2px
+      width: 100%
+      border-bottom: 1px dotted var(--primary-palette)
+      display: block
+      bottom: 1px
+      position: relative
+  &__val
+    flex-shrink: 0
+    font-weight: 700
+    padding-left: 4rem
+    position: relative
+    width: 130px
+    box-sizing: border-box
+    &:before
+      content: ''
+      width: 32px
+      height: 32px
+      background-image: url(../icon/icon-price.svg)
+      background-repeat: no-repeat
+      background-position: center
+      position: absolute
+      top: 0
+      left: 0
+      transform: translateY(-15%)
+  &__more
+    font-weight: 700
+    text-transform: uppercase
+    color: var(--primary-orange)
+    transition: .5s ease
+    svg
+      vertical-align: sub
+    path
+      transition: .5s ease
+    &:hover
+      color: var(--secondary-palette)
+      path
+        stroke: var(--secondary-palette)
+  &__control
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__btn
+    width: min(50%, 296px)
+    padding: 1.5rem

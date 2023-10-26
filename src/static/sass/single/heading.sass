@@ -1,0 +1,168 @@
+.heading
+  background: var(--secondary-blue)
+  padding: 5rem 0
+  box-sizing: border-box
+  &_service
+    padding-bottom: 12.5rem
+  &_doctors
+    min-height: 632px
+    +screen('max', 1023)
+      min-height: 100%
+  &__title
+    margin-top: 1.5rem
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__content
+    max-width: 810px
+  &__sign
+    +fs(28px)
+    margin-bottom: 3rem
+    margin-top: 1rem
+    +screen('max', 767)
+      +fs(22px)
+    &_doctors
+      margin-top: 4.5rem
+      margin-bottom: 5.5rem
+  &__item
+    +fs(18px)
+    padding-left: 40px
+    position: relative
+    margin-bottom: 1.5rem
+    &:before
+      content: ''
+      width: 30px
+      height: 30px
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      position: absolute
+      +bgi('../icon/icon-toggle.svg', no-repeat, 'center', contain)
+  &__control
+    margin-top: 4rem
+    display: flex
+    align-items: center
+    gap: 2rem
+    +screen('max', 767)
+      flex-flow: column
+      justify-content: center
+      gap: 5rem
+  &__btn
+    width: clamp(275px, 20vw, 375px)
+    display: block
+    +screen('max', 767)
+      width: 100%
+      padding: 20px
+  &__whts
+    +fs(18px)
+    padding-left: 35px
+    position: relative
+    font-weight: 700
+    display: block
+    text-transform: uppercase
+    &:before
+      content: ''
+      width: 28px
+      height: 28px
+      background-image: url(../icon/icon-whatsapp.svg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+  &__picture
+    position: relative
+    top: 25px
+    left: -3vw
+    z-index: 1
+    +screen('max', 1200)
+      top: 0
+    +screen('max', 1023)
+      display: none
+    &:before
+      content: ''
+      width: calc(100% + 100px)
+      height: calc(100% + 100px)
+      transition: 1s ease .1s
+      box-sizing: border-box
+      border-radius: 100%
+      border: 1px solid var(--primary-white)
+      position: absolute
+      top: -50px
+      left: -50px
+      z-index: -1
+      transform: scale(0.5)
+      opacity: 0
+      animation: open 2s ease-out .1s 1 reverse forwards
+    &_blue
+      &:before
+        border-color: var(--secondary-palette)
+  &__pic
+    vertical-align: middle
+    width: 456px
+    height: 456px
+    object-fit: cover
+    border-radius: 100%
+  &__work
+    margin-bottom: 1.5rem
+    +fs(22px)
+    +screen('max', 767)
+      +fs(18px)
+  &__price
+    +fs(22px)
+    +screen('max', 767)
+      +fs(18px)
+    span
+      font-weight: 700
+      padding-left: 50px
+      position: relative
+      box-sizing: border-box
+      color: var(--primary-orange)
+      display: inline-block
+      +fs(24px)
+      +screen('max', 767)
+        +fs(20px)
+      &:before
+        content: ''
+        width: 42px
+        height: 42px
+        background-image: url(../icon/icon-price.svg)
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(10%)
+        +screen('max', 767)
+          transform: translateY(-10%)
+
+.breadcrumb
+  display: flex
+  align-items: center
+  gap: 1rem
+  &__home
+    width: 40px
+    height: 40px
+    background-image: url(../icon/icon-home-breadcrumb.svg)
+    background-repeat: no-repeat
+    background-position: center
+    flex-shrink: 0
+  &__list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  &__link
+    position: relative
+    vertical-align: middle
+    +fs(18px)
+    &[href]
+      transition: .5s ease
+      &:after
+        content: '/'
+        padding: 0 0.35rem 0 0.5rem
+        vertical-align: text-top
+      &:hover
+        color: var(--primary-orange)
