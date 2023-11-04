@@ -27,9 +27,10 @@
   &__link
     text-transform: uppercase
     letter-spacing: 0.72px
+    transition: .5s ease
     +screen('max', 1023)
       +fs(14px)
-    &.active
+    &:hover
       color: var(--secondary-palette)
   &__bottom
     margin-top: 1rem

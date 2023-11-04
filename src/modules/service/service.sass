@@ -21,6 +21,8 @@
     position: relative
     z-index: 1
     overflow: hidden
+    background-size: cover
+    background-repeat: no-repeat
     +screen('max', 767)
       padding: 20px
     &:hover
@@ -35,7 +37,7 @@
     z-index: -1
     opacity: 0.3
     transition: 1s ease
-    object-fit: cover
+    object-fit: contain
   &__caption
     font-weight: 700
     +fs(22px)
@@ -102,12 +104,10 @@
     +screen('max', 1023)
       max-width: 100%
       margin-bottom: 5rem
-    ul
-      list-style: desc inside
+    ul,ol
+      list-style: inside
       margin: 2rem 0
-    ol
-      list-style: decimal inside
-      margin: 2rem 0
+      padding-left: 1.5rem
     p
       margin-bottom: 2rem
     h2,h3,h4

@@ -11,6 +11,14 @@ h2, .display-2
 // h3, .display-3
 // h4, .display-4
 
+.heading-title
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -100
+  font-size: 16px
+  color: #fff
+
 .title
   position: relative
   padding-left: 80px
@@ -48,3 +56,36 @@ h2, .display-2
   text-align: center
 .text-underline
   text-decoration: underline
+
+.text
+  line-height: 1.5
+  ul,ol
+    list-style: inside
+    margin: 2rem 0
+    padding-left: 1.5rem
+  p
+    margin-bottom: 2rem
+  h2,h3,h4
+    position: relative
+    padding-left: 80px
+    margin-bottom: 4rem
+    &:before
+      content: ''
+      width: 45px
+      height: 3px
+      background: var(--primary-orange)
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      border-radius: 50px
+      &:after
+        content: ''
+        width: 5px
+        height: 4px
+        background: var(--primary-orange)
+        position: absolute
+        left: 50px
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 75%

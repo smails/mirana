@@ -106,17 +106,24 @@ body
   .owl-dots
     position: absolute
     bottom: 3rem
-    width: 100%
+    width: calc(100% - 15rem)
     display: flex
     justify-content: center
     align-items: center
     gap: 7px
+    +screen('max', 1200)
+      width: 100%
+    +screen('max', 767)
+      gap: 3px
     .owl-dot
       background: var(--primary-grey)
       width: 15px
       height: 15px
       border-radius: 100%
       transition: .3s ease
+      +screen('max', 767)
+        width: 10px
+        height: 10px
       &.active
         background: var(--primary-orange)
 

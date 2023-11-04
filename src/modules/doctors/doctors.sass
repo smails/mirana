@@ -33,10 +33,14 @@
     +fs(20px)
     margin-bottom: 1rem
     height: 54px
+    +screen('max', 767)
+      height: auto
   &__pos
     line-height: 1.44
     margin-bottom: 1.2rem
     height: 70px
+    +screen('max', 767)
+      height: auto
   &__work
     margin-bottom: 1.2rem
   &__price
@@ -61,7 +65,7 @@
         transform: translateY(-15%)
   &__btn
     width: 100%
-    margin-top: 4rem
+    margin-top: 40px
   &__slider
     padding: 0 7.5rem 6rem
     box-sizing: border-box
@@ -80,6 +84,8 @@
     gap: 1rem
     margin-bottom: 3.2rem
     overflow: auto
+    +screen('max', 767)
+      padding-bottom: 2.5rem
   &__tab
     padding: 2rem 3rem
     +fs(18px)
@@ -116,21 +122,33 @@
     transition: .5s ease
     &:hover
       box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+      .doctors-list__pic
+        transform: scale(1.05)
+    picture
+      border-radius: 20px
+      overflow: hidden
+      display: block
+      max-height: 295px
+      margin-bottom: 1.5rem
   &__pic
     width: 100%
     border-radius: 20px
     vertical-align: middle
-    margin-bottom: 1.5rem
+    transition: 1s ease
   &__name
     font-weight: 700
     color: var(--secondary-palette)
     +fs(20px)
     margin-bottom: 1rem
     height: 54px
+    +screen('max', 767)
+      height: auto
   &__pos
     line-height: 1.44
     margin-bottom: 1.2rem
     height: 46px
+    +screen('max', 767)
+      height: auto
   &__work
     margin-bottom: 1.2rem
   &__price
@@ -184,9 +202,11 @@
     padding: 3.5rem 4.5rem
     box-sizing: border-box
     +fs(18px)
+    +screen('max', 767)
+      padding: 20px
     ul
       list-style: disc
-      padding-left: 2rem
+      padding-left: 20px
       line-height: 1.7
       li
         &:last-of-type
@@ -231,6 +251,8 @@
   &__txt
     flex-grow: 1
     margin-top: 2rem
+    +screen('max', 767)
+      padding: 10px 15px
     ul
       list-style: disc
       padding-left: 2rem
@@ -296,6 +318,10 @@
     box-sizing: border-box
     +screen('max', 1200)
       padding: 0
+    &.owl-carousel .owl-stage
+      display: flex
+    &.owl-carousel .owl-item
+      float: none
   &__slide
     display: flex
     align-items: flex-start
@@ -307,9 +333,10 @@
     box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
     margin: 3rem 3rem 4rem
     +fs(18px)
+    height: calc(100% - 6rem)
     +screen('max', 767)
       flex-flow: column
-      justify-content: center
+      justify-content: flex-start
       align-items: center
       padding: 5rem
   &__pic

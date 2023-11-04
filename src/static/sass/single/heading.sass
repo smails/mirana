@@ -10,6 +10,8 @@
       min-height: 100%
   &__title
     margin-top: 1.5rem
+    +screen('max', 767)
+      margin-top: 2.5rem
   &__row
     display: flex
     justify-content: space-between
@@ -22,6 +24,8 @@
     margin-top: 1rem
     +screen('max', 767)
       +fs(22px)
+      margin-top: 2.5rem
+      margin-bottom: 4rem
     &_doctors
       margin-top: 4.5rem
       margin-bottom: 5.5rem
@@ -48,6 +52,7 @@
       flex-flow: column
       justify-content: center
       gap: 5rem
+      margin-top: 6rem
   &__btn
     width: clamp(275px, 20vw, 375px)
     display: block
@@ -82,6 +87,13 @@
       top: 0
     +screen('max', 1023)
       display: none
+    &_mobile
+      display: none
+      +screen('max', 1023)
+        display: block
+        left: 0
+        text-align: center
+        margin: 6rem 0
     &:before
       content: ''
       width: calc(100% + 100px)
@@ -96,7 +108,12 @@
       z-index: -1
       transform: scale(0.5)
       opacity: 0
-      animation: open 2s ease-out .1s 1 reverse forwards
+      animation: open .75s ease-out reverse forwards
+      +screen('max', 1023)
+        width: calc(100% - 30px)
+        height: calc(100% + 40px)
+        top: -20px
+        left: 15px
     &_blue
       &:before
         border-color: var(--secondary-palette)
@@ -106,6 +123,9 @@
     height: 456px
     object-fit: cover
     border-radius: 100%
+    +screen('max', 1023)
+      width: calc(100% - 80px)
+      height: auto
   &__work
     margin-bottom: 1.5rem
     +fs(22px)
