@@ -1,0 +1,59 @@
+.sales
+  margin: 10rem 0
+  &__item
+    padding: 2rem
+    margin: 7rem 0
+    box-sizing: border-box
+    border-radius: 20px
+    transition: .5s ease
+    display: flex
+    gap: 2rem
+    background: rgb(255, 255, 255)
+    &:hover
+      box-shadow: 0px 8px 34px 0px rgba(0, 0, 0, 0.15)
+    +screen('max', 767)
+      flex-flow: column
+  &__pic
+    flex-shrink: 0
+    max-width: 296px
+    border-radius: 20px
+    +screen('max', 767)
+      width: 100%
+      max-width: 100%
+  &__content
+    padding-left: 80px
+    display: flex
+    flex-flow: column
+    gap: 2rem
+    box-sizing: border-box
+    position: relative
+    padding-bottom: 2rem
+    +screen('max', 767)
+      padding: 30px 20px
+    &:before
+      content: ''
+      width: 45px
+      height: 3px
+      background: var(--primary-orange)
+      position: absolute
+      left: 0
+      top: 13px
+      border-radius: 50px
+      +screen('max', 767)
+        top: 18px
+    &:after
+      content: ''
+      width: 5px
+      height: 4px
+      background: var(--primary-orange)
+      position: absolute
+      left: 50px
+      top: 13px
+      border-radius: 75%
+      +screen('max', 767)
+        top: 18px
+  &__txt
+    +fs(18px)
+    line-height: 1.5
+    +screen('max', 767)
+      +fs(16px)
